@@ -1,4 +1,4 @@
-import '../../App.css';
+import './ItemListContainer.css';
 
 const ItemListContainer = () => {
   return (
