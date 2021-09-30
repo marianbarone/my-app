@@ -1,11 +1,11 @@
-.listadoProductos {
+
+.tituloPeliculas {
     margin-left: 10px;
     margin-top:20px;
     font-size: 3em;
 }
 
-.productos {
-    margin-left: 10px;
-    margin-top:20px;
-    font-size: 1em;
+.moviesContainer {
+    display:flex;
+    flex-direction: row;
 }
