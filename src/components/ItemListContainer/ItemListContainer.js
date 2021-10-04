@@ -1,13 +1,12 @@
 import './ItemListContainer.css';
-import Item from '../Item/Item'
+import Movie from '../Movie/Movie'
 
 const ItemListContainer = () => {
   return (
     <>
       <h2 className='tituloPeliculas'>Peliculas</h2>
       <div className='moviesContainer'>
-        <Item/>
-        <Item/>
+        <Movie/>
       </div>
     </>
   )
