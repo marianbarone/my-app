@@ -1,0 +1,68 @@
+.movieDetail {
+    background-color: FFFFFF;
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    width: 100%;
+}
+
+.seccionImg {
+    width:50%;
+    float: left;
+}
+
+.seccionData {
+    width:50%;
+    float: right;
+}
+
+.imgProducto {
+    width: 100%;
+    max-width: 280px;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.nombreProducto {
+    font-size: 18px;
+    font-weight: 500;
+    /* padding-bottom: 10px; */
+    text-transform: uppercase;
+}
+
+
+.descripcionProducto {
+    display: block;
+    padding: 0 20px;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.precioProducto {
+    position: absolute;
+    background-color: #0b0742;
+    padding: 7px 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 450px;
+    margin-left: 190px;
+    box-shadow: -10px 20px 15px -10px rgba(0, 0, 0, 0.3);
+    width: max-content;
+}
+
+.rightAlign {
+    align-self: right;
+}
+
+.IMDB {
+    font-size: 11px;
+}
+
+.year {
+    font-size: 11px;
+}

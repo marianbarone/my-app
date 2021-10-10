@@ -3,7 +3,7 @@ import Movie from '../Movie/Movie'
 import './MovieList.css'
 
 function MovieList () {
-    const [movies, setMovies] = useState ([])
+    const [movies, setMovies] = useState (null)
     // const moviesdb = [
     //     {id: 0, title:"Batman Begins",poster:"https://cartelesmix.es/images/CartelesB/batmanbegins/poster026.jpg", year:"2008", rating:"8.4", precio: 950},
     //     {id: 1, title:"The Dark Knight",poster:"https://m.media-amazon.com/images/I/91KkWf50SoL._SL1500_.jpg", year:"2010", rating:"8.4", precio:1450},
@@ -19,9 +19,9 @@ function MovieList () {
             const url = 'https://api.themoviedb.org/3/movie/popular?api_key=cab5bdeb651360393b69a33b4e91eeb2&language=en-US&page=1';
             const response = await fetch(url);
             const data = await response.json();
-            const movies = data.results;
+            const [movie] = data.results;
             console.log(data.results);
-            setMovies(movies);
+            setMovies(movie);
         }
         fetchMovies();
     },[]);
@@ -61,7 +61,7 @@ function MovieList () {
     return (
         <ul>
             {
-                movies.map(data => <Movie data={data} />)
+                fetchMovies.map(data => <Movie data={data} />)
             }
         </ul>
     );

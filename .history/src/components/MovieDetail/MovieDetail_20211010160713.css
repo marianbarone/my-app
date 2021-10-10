@@ -1,0 +1,17 @@
+.movieDetail {
+    background-color: FFFFFF;
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    width: 100%;
+}
+
+.seccionImg {
+    width:50%;
+    float: left;
+}
+
+.seccionData {
+    width:50%;
+    float: right;
+}

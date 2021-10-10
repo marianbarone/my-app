@@ -3,7 +3,7 @@ import Movie from '../Movie/Movie'
 import './MovieList.css'
 
 function MovieList () {
-    const [movies, setMovies] = useState ([])
+    const [movies, setMovies] = useState (null)
     // const moviesdb = [
     //     {id: 0, title:"Batman Begins",poster:"https://cartelesmix.es/images/CartelesB/batmanbegins/poster026.jpg", year:"2008", rating:"8.4", precio: 950},
     //     {id: 1, title:"The Dark Knight",poster:"https://m.media-amazon.com/images/I/91KkWf50SoL._SL1500_.jpg", year:"2010", rating:"8.4", precio:1450},
