@@ -6,13 +6,10 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <MiNavBar />
-      <Switch>
-        <MovieListContainer />
-      </Switch>
-
-    </BrowserRouter>
+      <MovieListContainer />
+    </>
   )
 }
 export default App;
