@@ -17,7 +17,7 @@ const MiNavBar = () => {
             <LinkContainer to="/home">
               <Nav.Link>Inicio</Nav.Link>
             </LinkContainer>
-            <NavDropdown title="Películas">
+            <NavDropdown title="Películas" id="basic-nav-dropdown">
               <LinkContainer to="/Populares">
                 <NavDropdown.Item>Populares</NavDropdown.Item>
               </LinkContainer>

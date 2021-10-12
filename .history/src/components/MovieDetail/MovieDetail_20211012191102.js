@@ -1,5 +1,6 @@
 import './MovieDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
+// import Movie from '../Movie/Movie';
 
 const MovieDetail = ({data}) => {
   return (

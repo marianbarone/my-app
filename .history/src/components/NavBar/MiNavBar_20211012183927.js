@@ -8,40 +8,34 @@ const MiNavBar = () => {
     <>
       <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
       <Container>
-        <LinkContainer to="/Brand">
-          <Navbar.Brand>Mi Ecommerce</Navbar.Brand>
+        <LinkContainer to="/">
+          <Navbar.Brand href="#home">Mi Ecommerce</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <LinkContainer to="/home">
-              <Nav.Link>Inicio</Nav.Link>
+              <Nav.Link href="#home">Inicio</Nav.Link>
             </LinkContainer>
-            <NavDropdown title="Películas">
+
+            <NavDropdown title="Películas" id="basic-nav-dropdown">
               <LinkContainer to="/Populares">
-                <NavDropdown.Item>Populares</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1">Populares</NavDropdown.Item>
               </LinkContainer>
               <LinkContainer to="/Recientes">
-                <NavDropdown.Item>Recientes</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Recientes</NavDropdown.Item>
               </LinkContainer>
               <LinkContainer to="/Recientes">
-                <NavDropdown.Item>Mejores puntuadas</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Mejores puntuadas</NavDropdown.Item>
               </LinkContainer>
             </NavDropdown>
           </Nav>
           <Nav>
-          <LinkContainer to="/login">
-            <Nav.Link>Iniciar Sesión</Nav.Link>
-          </LinkContainer>
-
-          <LinkContainer to="/register">
-            <Nav.Link>Registrarse</Nav.Link>
-          </LinkContainer>
-
-          <LinkContainer to="/login">
-            <ShopCart />
-          </LinkContainer>
-
+          <Nav.Link href="#Login">Iniciar Sesión</Nav.Link>
+          <Nav.Link eventKey={2} href="#Registro">
+            Registrarse
+          </Nav.Link>
+          <ShopCart />
 
         </Nav>
         </Navbar.Collapse>

@@ -2,7 +2,6 @@ import './Movie.css';
 import ItemCount from '../ItemCount/ItemCount';
 import {LinkContainer} from 'react-router-bootstrap';
 
-
 const Movie = ({data}) => {
   return (
     <>

@@ -2,12 +2,11 @@ import './Movie.css';
 import ItemCount from '../ItemCount/ItemCount';
 import {LinkContainer} from 'react-router-bootstrap';
 
-
 const Movie = ({data}) => {
   return (
     <>
       {
-        <LinkContainer to={"../MovieDetail/MovieDetail:data.id"}>
+        <LinkContainer to={"/:data.id"}>
           <div key={data.id} className="card">
             <img className="imgProducto" src={data.poster_path} alt={data.original_title}></img>
             <h4 className="nombreProducto">{data.original_title}</h4>
