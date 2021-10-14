@@ -13,9 +13,8 @@ const ShopCart = ({ cartItems }) => {
 
                 <div>
                     {cartItems.map((item) => (
-                        <div key={item.id} className="cart-items-list">
+                        <div key={item.key} className="cart-items-list">
                             <img></img>
-                        </div>
                     ))}
                 </div>
             </div>

@@ -39,7 +39,7 @@ const MiNavBar = () => {
             <Nav.Link>Registrarse</Nav.Link>
           </LinkContainer>
 
-          <LinkContainer to="/Cart">
+          <LinkContainer to="/cart">
             <Nav.Link> <RiShoppingBag3Line /> </Nav.Link>
           </LinkContainer>
 

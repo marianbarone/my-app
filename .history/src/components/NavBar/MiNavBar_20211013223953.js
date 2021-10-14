@@ -1,8 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, NavDropdown, Container, Nav} from 'react-bootstrap';
+import ShopCart from './ShopCart';
 import {LinkContainer} from 'react-router-bootstrap'
-import { RiShoppingBag3Line } from 'react-icons/ri';
-
 
 const MiNavBar = () => {
   return (
@@ -39,7 +38,7 @@ const MiNavBar = () => {
             <Nav.Link>Registrarse</Nav.Link>
           </LinkContainer>
 
-          <LinkContainer to="/Cart">
+          <LinkContainer to="/cart">
             <Nav.Link> <RiShoppingBag3Line /> </Nav.Link>
           </LinkContainer>
 

@@ -3,7 +3,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import {LinkContainer} from 'react-router-bootstrap';
 
 
-const Movie = ({ data, handleAddProduct }) => {
+const Movie = ({data}) => {
   return (
     <>
       {
@@ -16,7 +16,7 @@ const Movie = ({ data, handleAddProduct }) => {
             <h6 className="cantidad">Cantidad</h6>
             <ItemCount />
             <h5 className="precioProducto">$ {data.vote_count}</h5>
-            <button ClassName="add-product" onClick={() => handleAddProduct(data)}> Agregar al carrito </button>
+            <button ClassName="add-product" onClick={AddMovie(data)}> Agregar al carrito </button>
           </div>
         </LinkContainer>
 

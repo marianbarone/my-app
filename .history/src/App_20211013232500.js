@@ -9,7 +9,7 @@ import Routes from './components/Front/Routes/Routes';
 
 function App() {
 
-  const {data} = MovieList;
+  const {productItems} = MovieList;
   const [cartItems, setCartItems] = useState([]);
   const handleAddProduct = (movie) => {
     const ProductExist = cartItems.find((item) => item.id === movie.id);
@@ -30,7 +30,7 @@ function App() {
   return (
     <Router>
       <MiNavBar />
-      <Routes data={data} cartItems={cartItems} handleAddProduct={handleAddProduct}/>
+      <Routes productItems={productItems} cartItems={cartItems} handleAddProduct={handleAddProduct}/>
 
     </Router>
   )

@@ -30,7 +30,7 @@ function App() {
   return (
     <Router>
       <MiNavBar />
-      <Routes data={data} cartItems={cartItems} handleAddProduct={handleAddProduct}/>
+      <Routes productItems={productItems} cartItems={cartItems} handleAddProduct={handleAddProduct}/>
 
     </Router>
   )

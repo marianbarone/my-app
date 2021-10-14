@@ -3,7 +3,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import {LinkContainer} from 'react-router-bootstrap';
 
 
-const Movie = ({ data, handleAddProduct }) => {
+const Movie = ({data}) => {
   return (
     <>
       {
