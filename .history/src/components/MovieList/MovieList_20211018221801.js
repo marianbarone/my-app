@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Movie from '../Movie/Movie'
 import './MovieList.css'
 
-function MovieList () {
+function MovieList (movies) {
     const [movies, setMovies] = useState ([])
 
     useEffect (() => {

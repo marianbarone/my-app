@@ -7,10 +7,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import MovieList from './components/MovieList/MovieList';
 import Routes from './components/Front/Routes/Routes';
 
-function App() {
+const App() {
 
-  const { MovieList } = MovieListContainer;
-  console.log(MovieList);
+  const {movies} = MovieList;
   const [cartItems, setCartItems] = useState([]);
   const handleAddProduct = (movie) => {
     const ProductExist = cartItems.find((item) => item.id === movie.id);
@@ -31,10 +30,9 @@ function App() {
   return (
     <Router>
       <MiNavBar />
-      <Routes MovieList={MovieList} cartItems={cartItems} handleAddProduct={handleAddProduct}/>
+      <Routes movies={movies} cartItems={cartItems} handleAddProduct={handleAddProduct}/>
 
     </Router>
   )
 }
-
 export default App;

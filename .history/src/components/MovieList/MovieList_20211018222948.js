@@ -20,7 +20,7 @@ function MovieList () {
     return (
         <ul>
             {
-                movies.map(data => <Movie key={data.id} data={data} />)
+                movies.map(MovieList => <Movie key={MovieList.id} data={MovieList} />)
             }
         </ul>
     );

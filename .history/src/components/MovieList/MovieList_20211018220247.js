@@ -17,13 +17,15 @@ function MovieList () {
         fetchMovies();
     },[]);
 
-    return (
-        <ul>
-            {
-                movies.map(data => <Movie key={data.id} data={data} />)
-            }
-        </ul>
-    );
+    // return (
+    //     <ul>
+    //         {
+    //             setMovies(movies)
+
+    //             // movies.map(data => <Movie key={data.id} data={data} />)
+    //         }
+    //     </ul>
+    // );
 }
 
 export default MovieList;

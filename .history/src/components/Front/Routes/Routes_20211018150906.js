@@ -6,12 +6,12 @@ import Signup from '../Signup/Signup';
 import ShopCart from '../../NavBar/ShopCart';
 
 
-const Routes = ({ MovieList, cartItems, handleAddProduct }) => {
+const Routes = ({ data, cartItems, handleAddProduct }) => {
     return (
         <div>
             <Switch>
                 <Route path="/" exact>
-                    <Movie MovieList={MovieList} handleAddProduct={handleAddProduct}/>
+                    <Movie movies={movies} handleAddProduct={handleAddProduct}/>
                 </Route>
                 <Route path="/signup" exact>
                     <Signup />

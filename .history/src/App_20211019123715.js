@@ -31,7 +31,7 @@ function App() {
   return (
     <Router>
       <MiNavBar />
-      <Routes MovieList={MovieList} cartItems={cartItems} handleAddProduct={handleAddProduct}/>
+      <Routes movieList={movieList} cartItems={cartItems} handleAddProduct={handleAddProduct}/>
 
     </Router>
   )
