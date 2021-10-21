@@ -6,7 +6,7 @@ import { CartCtxt } from '../Context/Context';
 
 const ShopCart = () => {
 
-    const { cart, setCart } = useContext(CartCtxt)
+    const { cart } = useContext(CartCtxt)
     const style = {
         "position": "fixed",
         "top": 0,
@@ -21,11 +21,9 @@ const ShopCart = () => {
                 {
                     (cart.length === 0) ? <div className="cart-items-empty"> No hay productos </div> :
 
-                    cart.map(data => {
+                    cart.map(item => {
                         return(
-                            <div key={data.id}>
-                                <p>{data.original_title}</p>
-                            </div>
+                            <div>{item.id}, {item.original_title}</div>
                         )
                     })
                 }

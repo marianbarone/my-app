@@ -21,10 +21,10 @@ const ShopCart = () => {
                 {
                     (cart.length === 0) ? <div className="cart-items-empty"> No hay productos </div> :
 
-                    cart.map(data => {
+                    cart.map(item => {
                         return(
-                            <div key={data.id}>
-                                <p>{data.original_title}</p>
+                            <div key={item.id}>
+                                <p>{item.original_title}</p>
                             </div>
                         )
                     })

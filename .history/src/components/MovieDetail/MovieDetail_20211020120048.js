@@ -15,7 +15,7 @@ const MovieDetail = ({ data }) => {
             <h6 className="IMDB">{data.vote_average} IMDB </h6>
             <h6 className="cantidad">Cantidad</h6>
             <ItemCount />
-            <h5 className="precioProductoDetail">$ {data.vote_count}</h5>
+            <h5 className="precioProducto">$ {data.vote_count}</h5>
           </div>
 
         </div>

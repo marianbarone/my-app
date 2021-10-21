@@ -3,6 +3,7 @@ import MovieListContainer from '../../MovieListContainer/MovieListContainer';
 import { Route, Switch } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import ShopCart from '../../NavBar/ShopCart';
+import MovieDetail from '../../MovieDetail/MovieDetail';
 import MovieDetailContainer from '../../MovieDetailContainer/MovieDetailContainer';
 
 

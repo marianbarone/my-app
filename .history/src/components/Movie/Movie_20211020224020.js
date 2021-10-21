@@ -1,15 +1,13 @@
 import "./Movie.css"
 import ItemCount from '../ItemCount/ItemCount';
 import { LinkContainer } from 'react-router-bootstrap';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { CartCtxt } from '../Context/Context';
 
 
 const Movie = ({ data, item }) => {
 
   const { cart, setCart } = useContext(CartCtxt)
-
-  const {count, setCount} = useState(ItemCount)
 
   const addToCart = (data) => {
       

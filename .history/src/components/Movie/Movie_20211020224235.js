@@ -1,7 +1,7 @@
 import "./Movie.css"
 import ItemCount from '../ItemCount/ItemCount';
 import { LinkContainer } from 'react-router-bootstrap';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { CartCtxt } from '../Context/Context';
 
 

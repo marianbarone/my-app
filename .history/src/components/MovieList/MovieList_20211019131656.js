@@ -11,7 +11,7 @@ function MovieList () {
             const response = await fetch(url);
             const data = await response.json();
             const movies = data.results;
-            console.log(data);
+            console.log(data)
             console.log(data.results);
             setMovies(movies);
         }

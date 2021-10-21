@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useContext } from 'react';
-import { NavItem } from 'react-bootstrap';
 import { CartCtxt } from '../Context/Context';
 
 
@@ -19,16 +18,18 @@ const ShopCart = () => {
                 <div className="cart-items-header">Éstos son los productos que agregaste al carrito:</div>
 
                 {
-                    (cart.length === 0) ? <div className="cart-items-empty"> No hay productos </div> :
-
-                    cart.map(data => {
+                    if (cart.length === 0) ? <div className="cart-items-empty"> No hay productos </div> :
+                    
+                    cart.map(movie => {
                         return(
-                            <div key={data.id}>
-                                <p>{data.original_title}</p>
-                            </div>
+                            <div>{movie.id}, {movie.original_title}</div>
                         )
                     })
                 }
+
+                {cartItems.length === 0 && (
+                    <div className="cart-items-empty"> No hay productos </div>
+                )}
 
             </div>
 

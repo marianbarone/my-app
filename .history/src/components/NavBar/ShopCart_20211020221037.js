@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useContext } from 'react';
-import { NavItem } from 'react-bootstrap';
 import { CartCtxt } from '../Context/Context';
 
 
@@ -23,9 +22,7 @@ const ShopCart = () => {
 
                     cart.map(data => {
                         return(
-                            <div key={data.id}>
-                                <p>{data.original_title}</p>
-                            </div>
+                            <div>{data.id}, {data.original_title}</div>
                         )
                     })
                 }

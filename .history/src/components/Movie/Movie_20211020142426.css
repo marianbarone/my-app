@@ -33,14 +33,14 @@
 
 .precioProducto {
     position: absolute;
-    background-color: #0b0742;
+    background-color: #706ca0;
     padding: 7px 20px;
     text-align: center;
     font-size: 24px;
     font-weight: 400;
     color: #fff;
     border-radius: 10px;
-    margin-top: 400px;
+    margin-top: 450px;
     margin-left: 190px;
     box-shadow: -10px 20px 15px -10px rgba(0, 0, 0, 0.3);
     width: max-content;
