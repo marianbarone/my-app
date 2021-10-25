@@ -14,7 +14,7 @@ function App() {
     <CartContext>
       <Router>
         <MiNavBar />
-        <Routes /* cartItems={cartItems} handleAddProduct={handleAddProduct} *//>
+        <Routes MovieListContainer={MovieListContainer} MovieDetailContainer={MovieDetailContainer}/* cartItems={cartItems} handleAddProduct={handleAddProduct} *//>
       </Router>
     </CartContext>
 

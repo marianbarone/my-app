@@ -20,7 +20,7 @@ const MovieDetailContainer = () => {
         fetchMovies();
     },[]);
 
-    return <MovieDetail data={movie} />
+    return <MovieDetail movie={movie} />
         
     
 };

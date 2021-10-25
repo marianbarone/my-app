@@ -9,18 +9,14 @@ const Movie = ({ data }) => {
 
   const { cart, setCart } = useContext(CartCtxt)
 
-  console.log(cart);
-
-  const [count, setCount] = useState(ItemCount)
+  const {count, setCount} = useState(ItemCount)
 
   const addToCart = (data) => {
-
-    console.log(data);
       
-    // setCart([
-    //   ...cart,
-    //   data
-    // ])
+    setCart([
+      ...cart,
+      data
+    ])
   }
 
 

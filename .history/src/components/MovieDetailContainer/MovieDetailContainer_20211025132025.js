@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import MovieDetail from './MovieDetailContainer';
-
+import Movie from '../Movie/Movie';
 
 const MovieDetailContainer = () => {
 
-    const [movie, setMovie] = useState ([])
+    const [movies, setMovies] = useState ([])
 
     useEffect (() => {
         async function fetchMovies() {
@@ -14,15 +14,16 @@ const MovieDetailContainer = () => {
             const movies = data.results;
             console.log(data);
             console.log(data.results);
-            //UseParams, traer ID para filter.
-            setMovie(movie);
+            setMovies(movies);
         }
         fetchMovies();
     },[]);
 
-    return <MovieDetail data={movie} />
-        
-    
+    return (
+        <div>
+            <MovieDetail data={data}/>
+        </div>
+    )
 };
 
 export default MovieDetailContainer
