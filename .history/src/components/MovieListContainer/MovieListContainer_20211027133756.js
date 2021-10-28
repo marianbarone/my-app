@@ -1,6 +1,7 @@
 import './MovieListContainer.css';
 import MovieList from '../MovieList/MovieList';
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { getFirestore } from "../../Firebase/firebase";
 
 const MovieListContainer = () => {

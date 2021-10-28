@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Movie from '../Movie/Movie'
 import './MovieList.css'
 
-const MovieList = ({movies}) => {
+function MovieList (movies) {
     // const [movies, setMovies] = useState ([])
 
     // useEffect (() => {
@@ -18,15 +18,13 @@ const MovieList = ({movies}) => {
     //     fetchMovies();
     // },[]);
 
-    return ( 
-        <div id="movie-list">
-            {movies.map(movie=>{
-                return (
-                    <Movie key={movie.id} movie={movie}/>
-                )
-            })}
-        </div>
-     );
+    return (
+        <ul>
+            {
+                movies.map(data => <Movie key={data.id} data={data} />)
+            }
+        </ul>
+    );
 }
 
 export default MovieList;

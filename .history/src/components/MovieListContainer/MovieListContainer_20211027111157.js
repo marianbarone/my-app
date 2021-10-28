@@ -1,27 +1,25 @@
 import './MovieListContainer.css';
 import MovieList from '../MovieList/MovieList';
 import { useEffect, useState } from "react";
-import { getFirestore } from "../../Firebase/firebase";
+import {useParams} from "react-router-dom";
+import { firestore } from "../Firebase/Firebase" 
 
-const MovieListContainer = () => {
-
-  const [movies, setMovies] = useState ([])
+const MovieListContainer = (movies) => {
 
   useEffect(() => {
-    // setLoading(true);
+    setLoading(true);
     const db = getFirestore();
     const itemCollection = db.collection("Movies");
     itemCollection.get().then((querySnapshot) => {
       if(querySnapshot.size===0) {
         console.log('No hay resultados');
       }
-      setMovies(querySnapshot.docs.map(doc => doc.data()));
-    })
-    // .catch((error) => {
-    //   console.log("error", error);
-    // }).finally(() => {
-    //   setLoading(false);
-    // });
+      setItems(querySnapshot.docs.map(doc => doc.data()));
+    }).catch((error) => {
+      console.log("error", error);
+    }).finally(() => {
+      setLoading(false);
+    });
 
   },[]);
 

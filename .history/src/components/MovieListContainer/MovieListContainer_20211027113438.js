@@ -1,14 +1,13 @@
 import './MovieListContainer.css';
 import MovieList from '../MovieList/MovieList';
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { getFirestore } from "../../Firebase/firebase";
 
-const MovieListContainer = () => {
-
-  const [movies, setMovies] = useState ([])
+const MovieListContainer = (movies) => {
 
   useEffect(() => {
-    // setLoading(true);
+    setLoading(true);
     const db = getFirestore();
     const itemCollection = db.collection("Movies");
     itemCollection.get().then((querySnapshot) => {
@@ -16,12 +15,11 @@ const MovieListContainer = () => {
         console.log('No hay resultados');
       }
       setMovies(querySnapshot.docs.map(doc => doc.data()));
-    })
-    // .catch((error) => {
-    //   console.log("error", error);
-    // }).finally(() => {
-    //   setLoading(false);
-    // });
+    }).catch((error) => {
+      console.log("error", error);
+    }).finally(() => {
+      setLoading(false);
+    });
 
   },[]);
 

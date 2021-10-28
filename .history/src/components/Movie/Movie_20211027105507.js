@@ -5,7 +5,7 @@ import { useContext, useState } from 'react';
 import { CartCtxt } from '../Context/Context';
 
 
-const Movie = ({ movie }) => {
+const Movie = ({ data }) => {
 
   const { cart, setCart } = useContext(CartCtxt)
 
@@ -27,18 +27,18 @@ const Movie = ({ movie }) => {
   return (
     <>
       {
-          <div key={movie.id} className="card">
-            <img className="imgProducto" src={movie.img} alt={movie.title}></img>
-            <h4 className="nombreProducto">{movie.title}</h4>
-            <h6 className="year">Release Date: {movie.year}</h6>
-            <h6 className="IMDB">{movie.rating} IMDB </h6>
+          <div key={data.id} className="card">
+            <img className="imgProducto" src={data.poster_path} alt={data.original_title}></img>
+            <h4 className="nombreProducto">{data.original_title}</h4>
+            <h6 className="year">Release Date: {data.release_date}</h6>
+            <h6 className="IMDB">{data.vote_average} IMDB </h6>
             <h6 className="cantidad">Cantidad</h6>
             <ItemCount />
-            <h5 className="precioProducto">$ {movie.price}</h5>
-            <LinkContainer to={`/Movie/${movie.id}`}>
+            <h5 className="precioProducto">$ {data.vote_count}</h5>
+            <LinkContainer to={`/Movie/${data.id}`}>
               <button className="verDetalle">Ver detalles</button>        
             </LinkContainer>
-            <button className="add-product" onClick={() => addToCart(movie)}> Agregar al carrito </button>
+            <button className="add-product" onClick={() => addToCart(data)}> Agregar al carrito </button>
           </div>
       }
     </>

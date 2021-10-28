@@ -3,15 +3,16 @@ import MovieDetail from './MovieDetailContainer';
 import { getFirestore } from "../../Firebase/firebase";
 
 
+
 const MovieDetailContainer = () => {
 
     const [movie, setMovie] = useState ([])
 
     useEffect(() => {
+    // setLoading(true);
         const db = getFirestore();
-
         const itemCollection = db.collection("Movies");
-        const movie = itemCollection.doc(1);
+        const movie = itemCollection.doc(movieId);
 
         movie.get().then((doc) => {
             if(!doc.exists) {
@@ -20,6 +21,11 @@ const MovieDetailContainer = () => {
         }
             setMovie({ id: doc.id, ...doc.data() });
         })
+        // .catch((error) => {
+        //   console.log("error", error);
+        // }).finally(() => {
+        //   setLoading(false);
+        // });
 
     },[]);
 

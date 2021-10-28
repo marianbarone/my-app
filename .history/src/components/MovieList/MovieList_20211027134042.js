@@ -18,15 +18,15 @@ const MovieList = ({movies}) => {
     //     fetchMovies();
     // },[]);
 
-    return ( 
-        <div id="movie-list">
-            {movies.map(movie=>{
+    return (
+        <ul>
+            {movies.map(data => {
                 return (
-                    <Movie key={movie.id} movie={movie}/>
+                    <Movie key={data.id} data={data} />
                 )
-            })}
-        </div>
-     );
+            });
+        </ul>
+    );
 }
 
 export default MovieList;

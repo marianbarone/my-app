@@ -25,7 +25,7 @@ const MovieDetail = ({ movie }) => {
   return (
     <>
       {
-        <div className="movieDetail">
+        <div key={movie.id} className="movieDetail">
           <div className="seccionImg">
             <img className="imgProducto" src={movie.img} alt={movie.title}></img>
           </div>
@@ -36,8 +36,7 @@ const MovieDetail = ({ movie }) => {
             <h6 className="cantidad">Cantidad</h6>
             <ItemCount />
             <h5 className="precioProductoDetail">$ {movie.price}</h5>
-            <button className="add-product" onClick={() => addToCart(movie)}> Agregar al carrito </button>
-
+            
           </div>
 
         </div>

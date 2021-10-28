@@ -6,7 +6,7 @@ import ShopCart from '../../NavBar/ShopCart';
 import MovieDetailContainer from '../../MovieDetailContainer/MovieDetailContainer';
 
 
-const Routes = (movie) => {
+const Routes = () => {
     return (
         <div>
             <Switch>
@@ -20,8 +20,8 @@ const Routes = (movie) => {
                     <ShopCart />
                 </Route>
                 {/* Esto me rompe todo*/}
-                <Route exact path="/movie/:id">
-                    <MovieDetailContainer movie={movie}/>
+                <Route path="/movie/:id">
+                    <MovieDetailContainer />
                 </Route>
             </Switch>
         </div>

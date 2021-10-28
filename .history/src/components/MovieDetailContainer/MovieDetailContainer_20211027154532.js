@@ -3,15 +3,15 @@ import MovieDetail from './MovieDetailContainer';
 import { getFirestore } from "../../Firebase/firebase";
 
 
+
 const MovieDetailContainer = () => {
 
     const [movie, setMovie] = useState ([])
 
     useEffect(() => {
         const db = getFirestore();
-
         const itemCollection = db.collection("Movies");
-        const movie = itemCollection.doc(1);
+        const movie = itemCollection.doc(id);
 
         movie.get().then((doc) => {
             if(!doc.exists) {

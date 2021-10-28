@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import MovieDetail from './MovieDetailContainer';
-import { getFirestore } from "../../Firebase/firebase";
 
 
 const MovieDetailContainer = () => {
@@ -8,18 +7,20 @@ const MovieDetailContainer = () => {
     const [movie, setMovie] = useState ([])
 
     useEffect(() => {
+    // setLoading(true);
         const db = getFirestore();
-
         const itemCollection = db.collection("Movies");
-        const movie = itemCollection.doc(1);
-
-        movie.get().then((doc) => {
-            if(!doc.exists) {
-                console.log('No hay resultados');
-                return;
+        itemCollection.get().then((querySnapshot) => {
+        if(querySnapshot.size===0) {
+            console.log('No hay resultados');
         }
-            setMovie({ id: doc.id, ...doc.data() });
+        setMovie(querySnapshot.docs.map(doc => doc.data()));
         })
+        // .catch((error) => {
+        //   console.log("error", error);
+        // }).finally(() => {
+        //   setLoading(false);
+        // });
 
     },[]);
 

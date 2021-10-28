@@ -3,6 +3,7 @@ import MovieDetail from './MovieDetailContainer';
 import { getFirestore } from "../../Firebase/firebase";
 
 
+
 const MovieDetailContainer = () => {
 
     const [movie, setMovie] = useState ([])
