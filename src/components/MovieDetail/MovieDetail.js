@@ -15,10 +15,10 @@ const MovieDetail = ({ movie }) => {
 
     console.log(data);
       
-    // setCart([
-    //   ...cart,
-    //   data
-    // ])
+    setCart([
+      ...cart,
+      movie
+    ])
   }
 
 
@@ -34,7 +34,7 @@ const MovieDetail = ({ movie }) => {
             <h6 className="year">Release Date: {movie.year}</h6>
             <h6 className="IMDB">{movie.rating} IMDB </h6>
             <h6 className="cantidad">Cantidad</h6>
-            <ItemCount />
+            <ItemCount stock={movie.stock}/>
             <h5 className="precioProductoDetail">$ {movie.price}</h5>
             <button className="add-product" onClick={() => addToCart(movie)}> Agregar al carrito </button>
 

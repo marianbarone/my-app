@@ -2,9 +2,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, NavDropdown, Container, Nav} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap'
 import { RiShoppingBag3Line } from 'react-icons/ri';
+import { CartCtxt } from '../Context/Context';
+import ShopCart from './ShopCart';
+import { useContext } from 'react';
 
 
-const MiNavBar = () => {
+const MiNavBar = (cart) => {
+
+  // const { cart } = useContext(CartCtxt)
+
   return (
     <>
       <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
@@ -41,6 +47,8 @@ const MiNavBar = () => {
 
           <LinkContainer to="/Cart">
             <Nav.Link> <RiShoppingBag3Line /> </Nav.Link>
+            {/* {cart.length ? cart.length : null} */}
+
           </LinkContainer>
 
 

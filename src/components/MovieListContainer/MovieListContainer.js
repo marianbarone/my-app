@@ -2,13 +2,13 @@ import './MovieListContainer.css';
 import MovieList from '../MovieList/MovieList';
 import { useEffect, useState } from "react";
 import { getFirestore } from "../../Firebase/firebase";
+import ItemCount from '../ItemCount/ItemCount';
 
 const MovieListContainer = () => {
 
   const [movies, setMovies] = useState ([])
 
   useEffect(() => {
-    // setLoading(true);
     const db = getFirestore();
     const itemCollection = db.collection("Movies");
     itemCollection.get().then((querySnapshot) => {
@@ -17,11 +17,6 @@ const MovieListContainer = () => {
       }
       setMovies(querySnapshot.docs.map(doc => doc.data()));
     })
-    // .catch((error) => {
-    //   console.log("error", error);
-    // }).finally(() => {
-    //   setLoading(false);
-    // });
 
   },[]);
 

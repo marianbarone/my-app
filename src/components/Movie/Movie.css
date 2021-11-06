@@ -1,6 +1,6 @@
 .card {
     background-color: #FFFFFF;
-    height: 520px;
+    height: 590px;
     width: 300px;
     padding: 10px;
     margin: 10px;
@@ -56,4 +56,78 @@
 
 .year {
     font-size: 11px;
+}
+
+.css-button-shadow--blue {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-color: #3d348b;
+    box-shadow: 0 3px 1px -2px #ccc, 0 2px 2px 0 #ccc, 0 1px 5px 0 #ccc;
+    margin-top: 10px;
+}
+
+.css-button-shadow--blue:active {
+    box-shadow: 0 4px 2px -3px #ccc, 0 4px 5px 1px #ccc, 0 2px 7px 1px #ccc;
+}
+
+/* CSS */
+.button-59 {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #3d348b;
+    box-sizing: border-box;
+    color: #3d348b;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #3d348b;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 60px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    border-radius: 5px;
+
+}
+
+.button-59:focus {
+    color: #171e29;
+}
+
+.button-59:hover {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+}
+
+.button-59:active {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+}
+
+@media (min-width: 768px) {
+    .button-59 {
+        min-width: 170px;
+    }
 }
