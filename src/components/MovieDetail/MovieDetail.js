@@ -9,7 +9,7 @@ const MovieDetail = ({ movie }) => {
 
     console.log(cart);
 
-  const [count, setCount] = useState(ItemCount)
+  // const [count, setCount] = useState(ItemCount)
 
   const addToCart = (movie) => {
 

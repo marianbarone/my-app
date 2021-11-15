@@ -19,9 +19,8 @@ const Routes = (movie) => {
                 <Route path="/Cart" exact>
                     <ShopCart />
                 </Route>
-                {/* Esto me rompe todo*/}
-                <Route exact path="/movie/:id">
-                    <MovieDetailContainer movie={movie}/>
+                <Route exact path={`/MovieDetailContainer/${movie.id}`}>
+                    <MovieDetailContainer/>
                 </Route>
             </Switch>
         </div>

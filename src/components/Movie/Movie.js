@@ -1,27 +1,26 @@
 import "./Movie.css"
 import ItemCount from '../ItemCount/ItemCount';
 import { LinkContainer } from 'react-router-bootstrap';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { CartCtxt } from '../Context/Context';
 
 
-const Movie = ({ movie, stock }) => {
+const Movie = ({ movie }) => {
 
-  const { cart, setCart } = useContext(CartCtxt)
-
-  console.log(cart);
+  const { addMovie } = useContext(CartCtxt)
 
   // const [count, setCount] = useState(ItemCount)
 
-  const addCart = (movie) => {
+  const onAdd = (cantidad) => {
       
-    setCart([
-      ...cart,
-      movie
-    ])
-  }
-  
+    const item_para_agregar = {
+      item : movie ,
+      quantity : cantidad
+    }
 
+    addMovie(item_para_agregar)
+  
+  }
 
   return (
     <>
@@ -32,12 +31,12 @@ const Movie = ({ movie, stock }) => {
             <h6 className="year">Release Date: {movie.year}</h6>
             <h6 className="IMDB">{movie.rating} IMDB </h6>
             <h6 className="cantidad">Cantidad</h6>
-            <ItemCount stock={movie.stock} />
+            <ItemCount stock={movie.stock} onAdd={onAdd}/>
             <h5 className="precioProducto">$ {movie.price}</h5>
-            <LinkContainer to={`/Movie/${movie.id}`}>
+            <LinkContainer to={`/MovieDetailContainer/${movie.id}`}>
               <button className="button-59">Ver detalle</button>        
             </LinkContainer>
-            <button className="css-button-shadow--blue" onClick={() => addCart(movie)}> Agregar al carrito </button>
+            <button className="css-button-shadow--blue" onClick={() => addMovie(movie)}> Agregar al carrito </button>
           </div>
       }
     </>

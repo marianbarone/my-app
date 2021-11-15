@@ -7,7 +7,7 @@ const MovieDetailContainer = () => {
 
     const [movie, setMovie] = useState ([]);
 
-    let params = useParams();
+    const params = useParams();
 
     useEffect (() => {
 
@@ -22,7 +22,7 @@ const MovieDetailContainer = () => {
         }).catch((error) => {
             console.error('Error', error);
         })
-        // setMovie(movieById);
+        setMovie(movieById);
     },[]);
 
 
@@ -46,8 +46,16 @@ const MovieDetailContainer = () => {
     
     */
 
-    return <MovieDetail movie={movie} />    
+    return (
+        <div>
+            <p>Detalle Item</p>
+            <MovieDetail movie={movie} />    
+
+        </div>
+
+    )
+    
     
 };
 
-export default MovieDetailContainer
+export default MovieDetailContainer;

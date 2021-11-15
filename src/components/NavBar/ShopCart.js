@@ -1,21 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useContext } from 'react';
 import { CartCtxt } from '../Context/Context';
-import ItemCount from '../ItemCount/ItemCount';
+import './ShopCart.css'
 
 
 const ShopCart = () => {
 
-    const { cart, setCart, removeItem } = useContext(CartCtxt)
-    const style = {
-        "position": "fixed",
-        "top": 0,
-        "right": "10vw"
-    }
+    const { cart, removeItem } = useContext(CartCtxt)
 
     return (
         <>
-            <div style={style} className="cart-items">
+            <div className="cart-items">
                 <div className="cart-items-header">Éstos son los productos que agregaste al carrito:</div>
 
                 {
@@ -23,9 +18,9 @@ const ShopCart = () => {
 
                     cart.map(movie => {
                         return(
-                            <div key={movie.id}>
-                                <p>{movie.title} x {movie.count} - $ {movie.price * movie.count}</p>
-                                <button onClick={() => removeItem(movie)}>Eliminar</button>
+                            <div className='items' key={movie.id}>
+                                <p className='movieTitle'>{movie.title} x {movie.stock} - $ {movie.price * movie.stock}</p>
+                                <button className='button-4' onClick={() => removeItem(movie)}>Eliminar</button>
                             </div>
                         )
                     })

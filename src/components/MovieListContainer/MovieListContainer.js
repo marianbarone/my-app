@@ -2,7 +2,6 @@ import './MovieListContainer.css';
 import MovieList from '../MovieList/MovieList';
 import { useEffect, useState } from "react";
 import { getFirestore } from "../../Firebase/firebase";
-import ItemCount from '../ItemCount/ItemCount';
 
 const MovieListContainer = () => {
 

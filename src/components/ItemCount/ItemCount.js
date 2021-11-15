@@ -1,7 +1,7 @@
 import './ItemCount.css';
 import React from "react";
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ stock, onAdd }) => {
 
   const {useState} = React;
 
@@ -14,6 +14,12 @@ const ItemCount = ({ stock }) => {
 
   const agregar = () => {
       stock > count ? setCount(count+1) : console.log("No hay más unidades");
+  }
+
+  const confirmar = () => {
+    if(stock > 0){
+        onAdd(count)
+    }
   }
   
 

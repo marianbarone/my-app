@@ -2,9 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, NavDropdown, Container, Nav} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap'
 import { RiShoppingBag3Line } from 'react-icons/ri';
-import { CartCtxt } from '../Context/Context';
-import ShopCart from './ShopCart';
-import { useContext } from 'react';
+
 
 
 const MiNavBar = (cart) => {
@@ -21,7 +19,7 @@ const MiNavBar = (cart) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <LinkContainer to="/home">
+            <LinkContainer to="">
               <Nav.Link>Inicio</Nav.Link>
             </LinkContainer>
             <NavDropdown title="Películas">
@@ -46,8 +44,9 @@ const MiNavBar = (cart) => {
           </LinkContainer>
 
           <LinkContainer to="/Cart">
-            <Nav.Link> <RiShoppingBag3Line /> </Nav.Link>
-            {/* {cart.length ? cart.length : null} */}
+            <Nav.Link> <RiShoppingBag3Line /> 
+            {cart.length ? cart.length : null}
+            </Nav.Link>
 
           </LinkContainer>
 
